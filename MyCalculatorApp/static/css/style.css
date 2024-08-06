@@ -102,7 +102,7 @@ body::before {
 
 .frame {
     text-align: center;
-    background: linear-gradient(to bottom, #3b95ef92,#04386cc4); /* Gradient background */
+    background: linear-gradient(to bottom, #3b95ef92,#04386cc4, #021d39c4); /* Gradient background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
@@ -110,7 +110,7 @@ body::before {
     max-width: 400px;
     margin-bottom: 25px;
     position: sticky; /* Make the frame sticky */
-    top: 30px; /* Adjust this value to match the height of your header */
+    top: 45px; /* Adjust this value to match the height of your header */
     z-index: 2; /* Ensure the frame stays above other content */
 }
 
