@@ -102,7 +102,7 @@ body::before {
 
 .frame {
     text-align: center;
-    background: linear-gradient(to bottom, #3b95ef92,#04386cc4, #021d39c4); /* Gradient background */
+    background: linear-gradient(to bottom, #3b95ef92,#04386ca2,rgba(255, 255, 255, 0.572),#04386ca2,#04386caf, #021d39b6,#021d39b8); /* Gradient background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
