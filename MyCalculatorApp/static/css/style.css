@@ -2,7 +2,7 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Align items to the top */
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -18,7 +18,7 @@ body::before {
     background-image: url('../images/mathboard.jpg');
     background-size: cover;
     background-position: center;
-    opacity: 0.57; /* Adjust the opacity value as needed */
+    opacity: 0.5; /* Adjust the opacity value as needed */
     z-index: -1; /* Ensure the background is behind other elements */
 }
 
@@ -40,6 +40,7 @@ body::before {
     margin-bottom: 10px;
 }
 
+
 .calculator-btn {
     background-color: #2196F3; /* Blue background */
     color: white; /* White text */
@@ -52,7 +53,7 @@ body::before {
     height: 50px; /* Fixed height */
     display: inline-block; /* Align with form */
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
-    background: linear-gradient(to bottom, #6bb6f4, #1373d4); /* Gradient background */
+    background: linear-gradient(to bottom, #6bb3ed, #1976D2); /* Gradient background */
     border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light top border */
     border-left: 1px solid rgba(255, 255, 255, 0.5); /* Light left border */
     border-right: 1px solid rgba(0, 0, 0, 0.1); /* Dark right border */
@@ -70,21 +71,90 @@ body::before {
     transform: translateY(0); /* No lift */
 }
 
-.frame {
-    text-align: center;
-    background: #bab8b8;
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 400px;
+.calculator-btn2 {
+    background-color: #2196F3; /* Blue background */
+    color: white; /* White text */
+    padding: 10px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Smaller text */
+    width: 210px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
-    background: linear-gradient(to bottom, #6bb6f4, #095098); /* Gradient background */
+    background: linear-gradient(to bottom, #6bb3ed, #1976D2); /* Gradient background */
     border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light top border */
     border-left: 1px solid rgba(255, 255, 255, 0.5); /* Light left border */
     border-right: 1px solid rgba(0, 0, 0, 0.1); /* Dark right border */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Dark bottom border */
     transition: box-shadow 0.2s, transform 0.2s; /* Animation on hover */
+}
+
+.calculator-btn2:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+.calculator-btn2:active {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Even deeper shadow */
+    transform: translateY(0); /* No lift */
+}
+
+.frame {
+    text-align: center;
+    background: linear-gradient(to bottom, #9dcdf4, #115da8); /* Gradient background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    width: 100%;
+    max-width: 400px;
     margin-bottom: 25px;
+    position: sticky; /* Make the frame sticky */
+    top: 30px; /* Adjust this value to match the height of your header */
+    z-index: 2; /* Ensure the frame stays above other content */
+}
+
+.result {
+    position: sticky; /* Make the frame sticky */
+    top: 510px; /* Adjust this value to match the height of your header */
+    z-index: 2; /* Ensure the frame stays above other content */
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    background: linear-gradient(to bottom, #f575e1, #d21fb7); /* Gradient background */
+    border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light top border */
+    border-left: 1px solid rgba(255, 255, 255, 0.5); /* Light left border */
+    border-right: 1px solid rgba(0, 0, 0, 0.1); /* Dark right border */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Dark bottom border */
+    transition: box-shadow 0.2s, transform 0.2s; /* Animation on hover */
+    border-radius: 5px;
+    padding: 7px;
+    color: white;
+    font-size: 16px;
+}
+
+.result:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
+    transform: translateY(-2px); /* Slight lift */
+}
+
+.result:active {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Even deeper shadow */
+    transform: translateY(0); /* No lift */
+}
+
+.history {
+    text-align: center;
+    background: #f1f1f1c3;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    width: 100%;
+    max-width: 400px;
+    margin: 35px 0 55px;
+    position: sticky; /* Make the history sticky */
+    top: 565px; /* Adjust this value to ensure it stays below the frame */
+    z-index: 1; /* Ensure the history stays below the frame */
+    max-height: 40vh; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
 }
 
 table {
@@ -98,22 +168,22 @@ button {
 
 .clear-history-btn {
     width: 100%;
-    padding: 10px;
-    background-color: #d21fb7;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 7px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
-    background: linear-gradient(to bottom, #d21fb7, #c113a7); /* Gradient background */
+    background: linear-gradient(to bottom, #f575e1, #d21fb7); /* Gradient background */
     border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light top border */
     border-left: 1px solid rgba(255, 255, 255, 0.5); /* Light left border */
     border-right: 1px solid rgba(0, 0, 0, 0.1); /* Dark right border */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Dark bottom border */
     transition: box-shadow 0.2s, transform 0.2s; /* Animation on hover */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .clear-history-btn:hover {
+    background-color: #b11399;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
     transform: translateY(-2px); /* Slight lift */
 }
@@ -128,3 +198,4 @@ button {
     list-style-type: none;
     padding: 0;
 }
+

@@ -13,7 +13,7 @@
 <body>
 
     <div class="calculator">
-        <div class="frame" >
+        <div class="frame">
             <h1>Calculator</h1>
             <form method="post">
                 {% csrf_token %}
@@ -38,14 +38,20 @@
                         <td><button type="button" class="calculator-btn" onclick="appendToDisplay('*')">*</button></td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('0')">0</button></td>
                         <td><button type="button" class="calculator-btn" onclick="clearDisplay()">C</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('0')">0</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('.')">.</button></td>
                         <td><button type="button" class="calculator-btn" onclick="appendToDisplay('/')">/</button></td>
-                        <td><button type="submit" class="calculator-btn">=</button></td>
+                    </tr>
+
+                </table>
+                <table>
+                    <tr>
+                        <td><button type="submit" class="calculator-btn2">=</button></td>
                     </tr>
                 </table>
             </form>
-        </div class="frame" >
+        </div class="frame">
         <br><br><br>
         {% if result is not None %}
         <div class="result">Result: {{ result }}</div>

@@ -17,3 +17,15 @@ def index(request):
 def clear_history(request):
     Calculation.objects.all().delete()
     return redirect('index')
+
+def calculate_result(expression):
+    try:
+        # Evaluate the expression
+        result = eval(expression)
+
+        # Round the result to 2 decimal places
+        result = round(result, 2)
+
+        return result
+    except Exception as e:
+        return "Error"
