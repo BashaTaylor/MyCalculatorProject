@@ -1,12 +1,22 @@
+// Function to append a value to the display
 function appendToDisplay(value) {
-    document.getElementById('display').value += value;
+    const display = document.getElementById('display');
+    display.value += value;
 }
 
+// Function to clear the display
 function clearDisplay() {
-    document.getElementById('display').value = '';
+    const display = document.getElementById('display');
+    display.value = '';
 }
 
-// Function to format numbers with commas
+// Function to remove the last character from the display (backspace)
+function backspace() {
+    const display = document.getElementById('display');
+    display.value = display.value.slice(0, -1);
+}
+
+// Function to format numbers with commas and two decimal places
 function formatNumberWithCommas(number) {
     if (isNaN(number)) {
         return number;
@@ -20,14 +30,7 @@ function formatNumberWithCommas(number) {
     return parts.join('.');
 }
 
-function appendToDisplay(value) {
-    document.getElementById('display').value += value;
-}
-
-function clearDisplay() {
-    document.getElementById('display').value = '';
-}
-
+// Event listener for DOM content loaded
 document.addEventListener('DOMContentLoaded', function() {
     const resultElement = document.querySelector('.result');
     if (resultElement) {
@@ -43,3 +46,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Event listener for keyboard input
+document.addEventListener('keydown', function(event) {
+    const display = document.getElementById('display');
+    const key = event.key;
+
+    if (!isNaN(key) || ['+', '-', '*', '/', '.'].includes(key)) {
+        appendToDisplay(key);
+    } else if (key === 'Enter') {
+        // Submit the form when Enter key is pressed
+        document.querySelector('form').submit();
+    } else if (key === 'Backspace') {
+        backspace();
+    }
+});

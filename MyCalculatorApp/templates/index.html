@@ -20,35 +20,38 @@
                 <input type="text" id="display" name="expression" value="{{ result|default:'' }}" readonly>
                 <table>
                     <tr>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('1')">1</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('2')">2</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('3')">3</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('+')">+</button></td>
-                    </tr>
-                    <tr>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('4')">4</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('5')">5</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('6')">6</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('-')">-</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="clearDisplay()">C</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="calculatePercentage()">%</button></td>
+                        
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('/')">/</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('*')">*</button></td>
                     </tr>
                     <tr>
                         <td><button type="button" class="calculator-btn" onclick="appendToDisplay('7')">7</button></td>
                         <td><button type="button" class="calculator-btn" onclick="appendToDisplay('8')">8</button></td>
                         <td><button type="button" class="calculator-btn" onclick="appendToDisplay('9')">9</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('*')">*</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('-')">-</button></td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="calculator-btn" onclick="clearDisplay()">C</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('4')">4</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('5')">5</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('6')">6</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('1')">1</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('2')">2</button></td>
+                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('3')">3</button></td>
+                        <td rowspan="2"><button type="submit" class="calculator-btn2">=</button></td> <!-- Span two rows -->
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="calculator-btn calculator-btn-back" onclick="backspace()">
+                            <img src="{% static 'images/back_btn22.svg' %}" alt="Back" class="back-button-icon">
+                        </button></td>
                         <td><button type="button" class="calculator-btn" onclick="appendToDisplay('0')">0</button></td>
                         <td><button type="button" class="calculator-btn" onclick="appendToDisplay('.')">.</button></td>
-                        <td><button type="button" class="calculator-btn" onclick="appendToDisplay('/')">/</button></td>
                     </tr>
-
-                </table>
-                <table>
-                    <tr>
-                        <td><button type="submit" class="calculator-btn2">=</button></td>
-                    </tr>
+                    
                 </table>
             </form>
         </div class="frame">
