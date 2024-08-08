@@ -107,7 +107,7 @@ body::before {
     background: linear-gradient(to bottom, #3b95ef92,#04386ca2,rgba(255, 255, 255, 0.572),#04386ca2,#04386caf, #021d39b6,#021d39b8); /* Gradient background */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    box-shadow: 3px 3px 5px rgba(150, 149, 149, 0.533); /* 3D shadow */
     width: 100%;
     max-width: 400px;
     margin-bottom: 25px;
@@ -120,7 +120,7 @@ body::before {
     position: sticky; /* Make the frame sticky */
     top: 510px; /* Adjust this value to match the height of your header */
     z-index: 2; /* Ensure the frame stays above other content */
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    box-shadow: 3px 3px 5px rgba(150, 149, 149, 0.533); /* 3D shadow */
     background: linear-gradient(to bottom, #f575e1, #d21fb7); /* Gradient background */
     border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light top border */
     border-left: 1px solid rgba(255, 255, 255, 0.5); /* Light left border */
@@ -134,12 +134,12 @@ body::before {
 }
 
 .result:hover {
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
+    box-shadow: 2px 2px 4px rgba(150, 149, 149, 0.533); /* Slightly deeper shadow */
     transform: translateY(-2px); /* Slight lift */
 }
 
 .result:active {
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Even deeper shadow */
+    box-shadow: 1px 1px 2px rgba(141, 140, 140, 0.4); /* Even deeper shadow */
     transform: translateY(0); /* No lift */
 }
 
@@ -148,7 +148,7 @@ body::before {
     background: #f1f1f1c3;
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    box-shadow: 3px 3px 5px rgba(150, 149, 149, 0.533); /* 3D shadow */
     width: 100%;
     max-width: 400px;
     margin: 35px 0 55px;
@@ -171,7 +171,7 @@ button {
 .clear-history-btn {
     width: 100%;
     padding: 7px;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* 3D shadow */
+    box-shadow: 3px 3px 5px rgba(150, 149, 149, 0.533); /* 3D shadow */
     background: linear-gradient(to bottom, #f575e1, #d21fb7); /* Gradient background */
     border-top: 1px solid rgba(255, 255, 255, 0.5); /* Light top border */
     border-left: 1px solid rgba(255, 255, 255, 0.5); /* Light left border */
@@ -186,12 +186,12 @@ button {
 
 .clear-history-btn:hover {
     background-color: #b11399;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow */
+    box-shadow: 2px 2px 4px rgba(150, 149, 149, 0.533); /* Slightly deeper shadow */
     transform: translateY(-2px); /* Slight lift */
 }
 
 .clear-history-btn:active {
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); /* Even deeper shadow */
+    box-shadow: 1px 1px 2px rgba(130, 128, 128, 0.3); /* Even deeper shadow */
     transform: translateY(0); /* No lift */
 }
 

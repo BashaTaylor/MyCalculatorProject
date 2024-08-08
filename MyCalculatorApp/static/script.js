@@ -16,7 +16,7 @@ function backspace() {
     display.value = display.value.slice(0, -1);
 }
 
-// Function to format numbers with commas and two decimal places
+// Function to format numbers with commas
 function formatNumberWithCommas(number) {
     if (isNaN(number)) {
         return number;
@@ -28,6 +28,22 @@ function formatNumberWithCommas(number) {
     const parts = number.split('.');
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return parts.join('.');
+}
+
+// Function to calculate percentage based on the last number entered
+function calculatePercentage() {
+    const display = document.getElementById('display');
+    const expression = display.value;
+
+    // Find the last number in the expression
+    const lastNumberMatch = expression.match(/(\d+\.?\d*)$/);
+    if (lastNumberMatch) {
+        const lastNumber = lastNumberMatch[0];
+        const percentage = parseFloat(lastNumber) / 100;
+
+        // Replace the last number with its percentage value
+        display.value = expression.replace(/(\d+\.?\d*)$/, percentage);
+    }
 }
 
 // Event listener for DOM content loaded
