@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
         {
-            "src": "project_name/wsgi.py",
+            "src": "MyCalculatorProject/wsgi.py",
             "use": "@vercel/python",
             "config": {
                 "maxLambdaSize": "50mb"
@@ -20,10 +20,10 @@
         },
         {
             "src": "/(.*)",
-            "dest": "project_name/wsgi.py"
+            "dest": "yCalculatorProject/wsgi.py"
         }
     ],
     "env": {
-        "DJANGO_SETTINGS_MODULE": "project_name.settings"
+        "DJANGO_SETTINGS_MODULE": "MyCalculatorProject.settings"
     }
 }
