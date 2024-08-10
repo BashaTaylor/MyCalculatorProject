@@ -1,0 +1,65 @@
+/* .calculator {
+    width: 200px;
+    margin: 100px auto;
+} */
+.calculator-btn {
+    background-color: #2196F3; /* Blue background */
+    color: white; /* White text */
+    padding: 10px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 14px; /* Smaller text */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    display: inline-block; /* Align with form */
+}
+
+.calculator-btn:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}
+.calculator input {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.frame {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 250px;
+    padding: 0 0 20px 20px;
+    background-color: rgb(158, 159, 163);
+    box-shadow: 10px 10px 6px rgb(211, 209, 209);
+    
+}
+
+.calculator .result {
+    height: 30px;
+    margin-top: 10px;
+}
+.history {
+    margin-top: 20px;
+}
+
+/* Style for the Clear History button */
+.clear-history-btn {
+    background-color: #d21fb7; /* Red background */
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger text */
+    width: 50%; 
+    margin: 0 auto;
+    white-space: nowrap; /* Prevent text wrapping */
+    display: inline-block; /* Align with form */
+    box-shadow: 10px 10px 6px rgb(211, 209, 209);
+}
+
+.clear-history-btn:hover {
+    background-color: #c113a7; /* Darker red on hover */
+}
